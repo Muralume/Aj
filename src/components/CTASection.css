@@ -1,0 +1,97 @@
+/* CTA Section Styles */
+.cta-section {
+  background-color: var(--bg-primary);
+  position: relative;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.cta-card {
+  position: relative;
+  background: linear-gradient(145deg, #1c1e22 0%, #141517 100%);
+  border: 1px solid var(--gold-border);
+  border-radius: 6px;
+  padding: clamp(2rem, 5vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cta-ambient-glow {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(166, 124, 69, 0.18) 0%,
+    rgba(198, 154, 91, 0.05) 50%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
+
+.cta-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-badge {
+  margin-bottom: 1.25rem;
+}
+
+.cta-title {
+  font-size: clamp(1.75rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.cta-btn-whatsapp {
+  padding: 1.05rem 2.2rem;
+  font-size: 1rem;
+  min-height: 48px;
+  box-shadow: 0 10px 30px rgba(166, 124, 69, 0.35);
+}
+
+.cta-btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 38px rgba(166, 124, 69, 0.45);
+}
+
+.cta-guarantee-note {
+  font-size: clamp(0.75rem, 2vw, 0.82rem);
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .cta-btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}

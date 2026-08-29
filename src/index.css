@@ -1,0 +1,308 @@
+/* ==========================================================================
+   AJ Planejar - Design Tokens & Global Stylesheet
+   Paleta:
+   - Grafite Profundo: #141517 (Fundo principal / Alto contraste)
+   - Cinza Grafite:    #202225 (Superfícies / Cards / Header)
+   - Prata:            #B8BDC3 (Textos secundários / Linhas sutis)
+   - Dourado Queimado: #A67C45 (Acentos nobres / Monograma / Destaques)
+   - Dourado Claro:    #C69A5B (Hover / Brilho / Detalhes de iluminação)
+   - Branco Suave:     #F5F3EF (Títulos / Textos principais)
+   ========================================================================== */
+
+:root {
+  /* Cores Base */
+  --bg-primary: #141517;
+  --bg-secondary: #1a1c1f;
+  --bg-card: #202225;
+  --bg-card-hover: #26292d;
+  --bg-overlay: rgba(20, 21, 23, 0.82);
+  --bg-glass: rgba(32, 34, 37, 0.75);
+
+  /* Acentos Metálicos & Madeiras Nobres */
+  --gold-primary: #A67C45;
+  --gold-light: #C69A5B;
+  --gold-subtle: rgba(166, 124, 69, 0.15);
+  --gold-glow: rgba(198, 154, 91, 0.25);
+  --gold-border: rgba(166, 124, 69, 0.35);
+
+  /* Neutros & Tipografia */
+  --text-main: #F5F3EF;
+  --text-muted: #B8BDC3;
+  --text-dim: #8e949b;
+  --border-subtle: rgba(184, 189, 195, 0.12);
+  --border-focus: #C69A5B;
+
+  /* Tipografia */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transições e Sombras */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-gold: 0 8px 25px rgba(166, 124, 69, 0.22);
+
+  /* Espaçamentos e Layout */
+  --header-height: 74px;
+  --container-max: 1240px;
+  --section-padding-y: clamp(3.5rem, 7vw, 7.5rem);
+  --section-padding-x: clamp(1rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --header-height: 80px;
+  }
+}
+
+/* Reset Global & Acessibilidade */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Scrollbar personalizada e elegante */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2f34;
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Tipografia Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all var(--transition-fast);
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+/* Elementos e Classes Utilitárias */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+}
+
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  position: relative;
+}
+
+/* Badges e Identificadores Visuais */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.badge-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--gold-light);
+  border-radius: 50%;
+}
+
+.section-title-wrapper {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  max-width: 680px;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--text-muted);
+}
+
+/* Botões do Sistema */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 3px;
+  transition: all var(--transition-normal);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+  color: #141517;
+  font-weight: 700;
+  box-shadow: var(--shadow-gold);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d4a96b 0%, #b88b50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(166, 124, 69, 0.38);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(32, 34, 37, 0.6);
+  color: var(--text-main);
+  border: 1px solid rgba(184, 189, 195, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Linha Divisória de Acabamento Arquitetônico */
+.editorial-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-subtle) 25%, var(--gold-border) 50%, var(--border-subtle) 75%, transparent 100%);
+  margin: 0 auto;
+}
+
+/* Animações e Motion */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Acessibilidade: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

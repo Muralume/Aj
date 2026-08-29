@@ -107,7 +107,7 @@ export const servicesContent = {
       number: '01',
       title: 'Cozinhas planejadas',
       description: 'Organização, funcionalidade e acabamento sob medida para o dia a dia.',
-      image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/servico-cozinha.jpg',
       alt: 'Cozinha planejada moderna com armários escuros e bancada elegante'
     },
     {
@@ -115,7 +115,7 @@ export const servicesContent = {
       number: '02',
       title: 'Dormitórios e closets',
       description: 'Soluções personalizadas para aproveitar o espaço com conforto e praticidade.',
-      image: 'https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/servico-closet.jpg',
       alt: 'Closet planejado com iluminação embutida e gavetas organizadoras'
     },
     {
@@ -123,7 +123,7 @@ export const servicesContent = {
       number: '03',
       title: 'Salas e painéis',
       description: 'Móveis que integram tecnologia, decoração e organização.',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/servico-sala.jpg',
       alt: 'Painel ripado de sala planejado com suporte de TV e nichos iluminados'
     },
     {
@@ -131,7 +131,7 @@ export const servicesContent = {
       number: '04',
       title: 'Home offices e ambientes comerciais',
       description: 'Projetos funcionais para espaços de trabalho modernos e bem planejados.',
-      image: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/servico-homeoffice.jpg',
       alt: 'Home office planejado contemporâneo com bancada e prateleiras suspensas'
     }
   ] as ServiceItem[]
@@ -144,51 +144,51 @@ export const portfolioContent = {
   projects: [
     {
       id: 'proj-1',
-      title: 'Cozinha planejada',
-      category: 'Cozinha',
-      description: 'Mobiliário integrado com torre quente, armários em tons escuros e iluminação em fita de LED.',
-      image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=85',
-      alt: 'Projeto de cozinha planejada contemporânea de alto padrão'
+      title: 'Móveis Planejados',
+      category: 'Residencial',
+      description: 'Integração completa de marcenaria nobre entre ambientes com aproveitamento inteligente de espaço.',
+      image: '/images/moveis-planejados.jpg',
+      alt: 'Projeto de móveis planejados integrados de alto padrão'
     },
     {
       id: 'proj-2',
-      title: 'Closet personalizado',
-      category: 'Closet',
-      description: 'Divisões sob medida com perfis metálicos, nichos para acessórios e portas reflecta.',
-      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85',
-      alt: 'Projeto de closet personalizado com espelho e organização precisa'
+      title: 'Cozinha Planejada',
+      category: 'Cozinha',
+      description: 'Mobiliário sob medida com ilha em mármore, armários com amortecimento e iluminação em fita de LED.',
+      image: '/images/cozinha-planejada.jpg',
+      alt: 'Projeto de cozinha planejada contemporânea de alto padrão'
     },
     {
       id: 'proj-3',
-      title: 'Painel para sala',
+      title: 'Sala Planejada',
       category: 'Living',
-      description: 'Composição de painel ripado em madeira nobre com rack suspenso e fiação 100% oculta.',
-      image: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=85',
+      description: 'Painel ripado em madeira nobre com rack suspenso, nichos iluminados e fiação 100% oculta.',
+      image: '/images/sala-planejada.jpg',
       alt: 'Painel de sala planejado com acabamento em marcenaria nobre e iluminação'
     },
     {
       id: 'proj-4',
-      title: 'Dormitório planejado',
+      title: 'Quarto Planejado',
       category: 'Quarto',
-      description: 'Cabeceira estofada com painel lateral em marcenaria e mesas de cabeceira flutuantes.',
-      image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=85',
+      description: 'Dormitório elegante com guarda-roupa embutido em vidro reflecta, cabeceira ripada e iluminação aconchegante.',
+      image: '/images/quarto-planejado.jpg',
       alt: 'Dormitório de casal planejado com design minimalista e acolhedor'
     },
     {
       id: 'proj-5',
-      title: 'Home office',
-      category: 'Escritório',
-      description: 'Espaço ergonômico com mesa ampla, nichos aéreos para livros e canaletas embutidas.',
-      image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85',
+      title: 'Escritório Planejado',
+      category: 'Home Office',
+      description: 'Espaço de trabalho ergonômico com mesa em madeira nobre, estante planejada e nichos aéreos.',
+      image: '/images/escritorio-planejado.jpg',
       alt: 'Home office planejado funcional e sofisticado'
     },
     {
       id: 'proj-6',
-      title: 'Ambiente comercial',
-      category: 'Corporativo',
-      description: 'Recepção e sala de reuniões com balcão curvo em marcenaria e painéis decorativos.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85',
-      alt: 'Ambiente corporativo planejado com marcenaria sob medida elegante'
+      title: 'Espaço Gourmet Planejado',
+      category: 'Área Gourmet',
+      description: 'Bancada gourmet com churrasqueira integrada, adega climatizada e armários resistentes sob medida.',
+      image: '/images/espaco-gourmet-planejado.jpg',
+      alt: 'Espaço gourmet planejado com bancada em granito e marcenaria premium'
     }
   ] as PortfolioItem[]
 };
